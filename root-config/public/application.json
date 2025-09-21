@@ -1,0 +1,44 @@
+{
+  "applications": [
+    {
+      "package": "@ecommerce/app-header",
+      "exact": false,
+      "activeWhen": ["/"]
+    },
+    {
+      "package": "@ecommerce/app-home",
+      "exact": true,
+      "activeWhen": "/"
+    },
+    {
+      "package": "@ecommerce/app-footer",
+      "exact": false,
+      "activeWhen": ["/"]
+    },
+    {
+      "package": "@ecommerce/app-cart",
+      "exact": false,
+      "activeWhen": ["/cart"]
+    },
+    {
+      "package": "@ecommerce/app-wishlist",
+      "exact": false,
+      "activeWhen": ["/wishlist"]
+    },
+    {
+      "package": "@ecommerce/app-contact",
+      "exact": false,
+      "activeWhen": ["/contact"]
+    },
+    {
+      "package": "@ecommerce/app-about",
+      "exact": false,
+      "activeWhen": ["/about"]
+    },
+    {
+      "package": "@ecommerce/app-profile",
+      "exact": false,
+      "activeWhen": ["/profile"]
+    }
+  ]
+}

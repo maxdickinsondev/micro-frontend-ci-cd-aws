@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ecommerce</title>
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"
+    /> -->
+    <meta name="importmap-type" content="systemjs-importmap" />
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+          "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js"
+        }
+      }
+    </script>
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+      as="script"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      type="systemjs-importmap"
+      src="https://store.maxdickinson.com/config/importmap.json"
+    ></script>
+    <% if (isLocal) { %>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "@ecommerce/root-config": "//localhost:9000/ecommerce-root-config.js",
+          "@ecommerce/app-header": "//localhost:8100/ecommerce-app-header.js",
+          "@ecommerce/app-footer": "//localhost:8300/ecommerce-app-footer.js",
+          "@ecommerce/app-home": "//localhost:8400/ecommerce-app-home.js",
+          "@ecommerce/app-cart": "//localhost:8500/ecommerce-app-cart.js",
+          "@ecommerce/app-wishlist": "//localhost:8600/ecommerce-app-wishlist.js",
+          "@ecommerce/util-ui": "//localhost:8700/ecommerce-util-ui.js",
+          "@ecommerce/util-state": "//localhost:8200/ecommerce-util-state.js",
+          "@ecommerce/app-contact": "//localhost:8800/ecommerce-app-contact.js",
+          "@ecommerce/app-profile": "//localhost:8900/ecommerce-app-profile.js",
+          "@ecommerce/app-about": "//localhost:9100/ecommerce-app-about.js"
+        }
+      }
+    </script>
+    <% } %>
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+    <% if (isLocal) { %>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+    <% } else { %>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+    <% } %>
+  </head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <header id="single-spa-application:@ecommerce/app-header"></header>
+    <main>
+      <div id="single-spa-application:@ecommerce/app-home"></div>
+      <div id="single-spa-application:@ecommerce/app-cart"></div>
+      <div id="single-spa-application:@ecommerce/app-wishlist"></div>
+      <div id="single-spa-application:@ecommerce/app-contact"></div>
+      <div id="single-spa-application:@ecommerce/app-profile"></div>
+      <div id="single-spa-application:@ecommerce/app-about"></div>
+    </main>
+    <footer id="single-spa-application:@ecommerce/app-footer"></footer>
+    <script>
+      System.import("@ecommerce/root-config");
+    </script>
+    <import-map-overrides-full
+      show-when-local-storage="devtools"
+      dev-libs
+    ></import-map-overrides-full>
+  </body>
+</html>

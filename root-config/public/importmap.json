@@ -1,0 +1,15 @@
+{
+  "imports": {
+    "@ecommerce/root-config": "https://store.maxdickinson.com/mfes/root-config/ecommerce-root-config.js",
+    "@ecommerce/app-header": "https://store.maxdickinson.com/mfes/app-header/ecommerce-app-header.js",
+    "@ecommerce/app-footer": "https://store.maxdickinson.com/mfes/app-footer/ecommerce-app-footer.js",
+    "@ecommerce/app-cart": "https://store.maxdickinson.com/mfes/app-cart/ecommerce-app-cart.js",
+    "@ecommerce/app-wishlist": "https://store.maxdickinson.com/mfes/app-wishlist/ecommerce-app-wishlist.js",
+    "@ecommerce/app-home": "https://store.maxdickinson.com/mfes/app-home/ecommerce-app-home.js",
+    "@ecommerce/app-about": "https://store.maxdickinson.com/mfes/app-about/ecommerce-app-about.js",
+    "@ecommerce/app-contact": "https://store.maxdickinson.com/mfes/app-contact/ecommerce-app-contact.js",
+    "@ecommerce/app-profile": "https://store.maxdickinson.com/mfes/app-profile/ecommerce-app-profile.js",
+    "@ecommerce/util-ui": "https://store.maxdickinson.com/mfes/util-ui/ecommerce-util-ui.js",
+    "@ecommerce/util-state": "https://store.maxdickinson.com/mfes/util-state/ecommerce-util-state.js"
+  }
+}
