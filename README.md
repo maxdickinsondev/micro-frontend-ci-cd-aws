@@ -1,5 +1,7 @@
 # 🛒 Micro-Frontend E-commerce com Single-SPA
 
+![1720884325082](https://github.com/user-attachments/assets/bbc10912-7066-4eca-9221-2ff5e5ebf4fd)
+
 ## 📌 Sobre o Projeto
 Nos últimos dias estive estudando sobre a criação de **Micro-Frontend** utilizando o framework [**single-spa**](https://single-spa.js.org/).  
 A arquitetura de **Micro-Frontend** consiste em dividir o front-end em pequenas aplicações independentes, permitindo benefícios como:
